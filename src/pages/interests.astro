@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+
+// One entry per thing you're into. `link` can point to a post, a repo, or anywhere else.
+const interests = [
+	{
+		name: 'Ranking and recommendation',
+		blurb: 'How forums and feeds decide what you see, and simulating it to find out.',
+		link: 'https://github.com/lordoferos/rank_simulator',
+	},
+	{
+		name: 'Maps',
+		blurb: 'More than is probably healthy.',
+	},
+	{
+		name: 'Something else',
+		blurb: 'Replace this with whatever else you want to write about.',
+	},
+];
+---
+
+<Base title="Interests" description="Things I'm into outside of work.">
+	<h1>Interests</h1>
+	<p class="muted">The things I keep coming back to outside of work.</p>
+	<ul class="grid">
+		{
+			interests.map(({ name, blurb, link }) => (
+				<li>
+					<h2>{link ? <a href={link}>{name}</a> : name}</h2>
+					<p>{blurb}</p>
+				</li>
+			))
+		}
+	</ul>
+</Base>
+<style>
+	.grid {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+		gap: 1rem;
+	}
+	li {
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.1rem 1.25rem;
+	}
+	h2 {
+		font-size: 1.15rem;
+		margin: 0 0 0.4rem;
+	}
+	h2 a {
+		text-decoration: none;
+	}
+	p {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.95rem;
+	}
+</style>

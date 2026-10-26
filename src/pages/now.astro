@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Bump this whenever you edit the page.
+const updated = new Date('2026-10-25');
+---
+
+<Base title="Now" description="What I'm focused on at the moment.">
+	<h1>Now</h1>
+	<p class="eyebrow">
+		Updated {updated.toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' })}
+	</p>
+	<ul>
+		<li>Starting this site and a weekly writing habit.</li>
+		<li>Reading: …</li>
+		<li>Building: …</li>
+		<li>Learning: …</li>
+	</ul>
+	<p class="muted">
+		This is a <a href="https://nownownow.com/about">now page</a>. Ask me about any of it.
+	</p>
+</Base>

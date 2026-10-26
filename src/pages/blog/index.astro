@@ -1,0 +1,33 @@
+---
+import PostList from '../../components/PostList.astro';
+import Base from '../../layouts/Base.astro';
+import { getPosts, getTags } from '../../posts';
+
+const posts = await getPosts();
+const tags = getTags(posts);
+---
+
+<Base title="Blog" description="Every post, newest first.">
+	<h1>Blog</h1>
+	<p class="muted">A weekly post on whatever I'm into. <a href="/rss.xml">RSS feed</a>.</p>
+	{
+		tags.length > 0 && (
+			<p class="tags">
+				{tags.map((tag) => (
+					<a class="tag" href={`/tags/${tag}/`}>
+						{tag}
+					</a>
+				))}
+			</p>
+		)
+	}
+	<PostList posts={posts} />
+</Base>
+<style>
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 2rem;
+	}
+</style>

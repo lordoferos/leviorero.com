@@ -1,0 +1,41 @@
+---
+import PostList from '../components/PostList.astro';
+import { LINKS, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Base from '../layouts/Base.astro';
+import { getPosts } from '../posts';
+
+const posts = (await getPosts()).slice(0, 5);
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<section class="intro">
+		<h1>Hi, I'm Levi.</h1>
+		<p>
+			This is where I write about whatever has my attention that week: things I'm building, reading,
+			cooking, arguing with myself about. A new post goes up every week.
+		</p>
+		<p class="muted">
+			Looking for my research and data work? That lives on my <a href={LINKS.professional}
+				>professional site</a
+			> and at <a href={LINKS.wrangla360}>Wrangla360</a>.
+		</p>
+	</section>
+
+	<section>
+		<h2>Latest posts</h2>
+		{posts.length > 0 ? <PostList posts={posts} /> : <p class="muted">First post coming soon.</p>}
+		<p class="more"><a href="/blog/">All posts →</a> · <a href="/rss.xml">Subscribe via RSS</a></p>
+	</section>
+</Base>
+<style>
+	.intro {
+		margin-bottom: 3rem;
+	}
+	.intro p:first-of-type {
+		font-size: 1.15rem;
+	}
+	.more {
+		margin-top: 1.5rem;
+		font-size: 0.95rem;
+	}
+</style>

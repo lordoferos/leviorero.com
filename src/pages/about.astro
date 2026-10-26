@@ -1,0 +1,25 @@
+---
+import { LINKS } from '../consts';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About" description="Who I am when I'm not at work.">
+	<h1>About</h1>
+	<p>
+		I'm Levi Orero. By day I work on survey and evaluation research in East Africa and run <a
+			href={LINKS.wrangla360}>Wrangla360</a
+		>. This site is for everything else.
+	</p>
+	<p>
+		<!-- Write a few sentences about yourself outside of work: where you are, what you do for fun, why this blog exists. -->
+		…
+	</p>
+	<h2>Elsewhere</h2>
+	<ul>
+		<li><a href={LINKS.professional}>Professional site</a>: research, projects and publications</li>
+		<li><a href={LINKS.wrangla360}>Wrangla360</a>: work-related articles</li>
+		<li><a href={LINKS.github}>GitHub</a></li>
+		<li><a href={LINKS.x}>X / @leviorero</a></li>
+		<li><a href={LINKS.email}>Email</a></li>
+	</ul>
+</Base>

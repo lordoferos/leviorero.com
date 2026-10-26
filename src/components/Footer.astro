@@ -1,0 +1,37 @@
+---
+import { LINKS } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div class="container">
+		<p>
+			For my research and data work, see my <a href={LINKS.professional}>professional site</a>
+			and <a href={LINKS.wrangla360}>Wrangla360</a>.
+		</p>
+		<p class="links">
+			<a href="/rss.xml">RSS</a>
+			<a href={LINKS.github}>GitHub</a>
+			<a href={LINKS.x}>X</a>
+			<a href={LINKS.email}>Email</a>
+		</p>
+		<p class="muted">© {year} Levi Orero</p>
+	</div>
+</footer>
+<style>
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 2rem 0 3rem;
+		font-size: 0.9rem;
+		color: var(--muted);
+	}
+	footer p {
+		margin: 0 0 0.6rem;
+	}
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1rem;
+	}
+</style>
