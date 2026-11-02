@@ -1,28 +1,34 @@
 ---
 title: 'Hello, world'
 description: 'Why this site exists and what to expect from it.'
-pubDate: 2026-10-25
+pubDate: 2026-10-26
 tags: ['meta']
-draft: true
+draft: false
 ---
 
-This is a placeholder first post. Rewrite it in your own words, then delete the `draft: true` line to publish it.
+Hi, I'm Levi. If you know me from work, you know me as the survey and research person, the one behind [Wrangla360](https://wrangla360.com). That's a real part of me, but it's only one part.
 
-Some things worth covering:
+I'm also someone who reads a lot, watches more documentaries than I'd like to admit, and writes fiction and poetry (I've published [a novel and three poetry collections](https://www.amazon.com/stores/author/B01MTEZ03T) as Alfred Orero). I build side projects. I spend too much time thinking about how social networks shape the way we connect, and how quickly AI has changed everyday life. None of that really fits on a professional site, so I made this one.
 
-- Why you're starting a personal blog separate from your work writing
-- What kinds of things you'll write about
-- The weekly cadence, and what readers can expect
+## What this site is for
 
-## Formatting reference
+Simply put: the full me. Work writing has its place, and it stays on Wrangla360. This is everything else.
 
-Posts are plain Markdown. **Bold**, _italic_, [links](https://leviorero.com), `inline code`, and:
+## What to expect
 
-```r
-library(ggplot2)
-ggplot(mtcars, aes(wt, mpg)) + geom_point()
-```
+Roughly one post a week. Some will be proper essays, and some will be short notes on something I read, watched or built. Expect things like:
 
-> Blockquotes look like this.
+- Books and documentaries worth your time
+- Fiction and poetry, now and then
+- Social networking and how online spaces work
+- Videography and telling stories with a camera
+- AI and how it's changing the way we live
+- Side projects, including the ones that don't work out
 
-Images go in `src/assets/` and are referenced with a relative path, for example `![Alt text](../../assets/photo.jpg)`.
+Some weeks will be polished, some will be rough. That's part of the deal.
+
+## Say hi
+
+If something here catches your eye, I'd love to hear about it. You can find me on [X](https://x.com/leviorero) or [GitHub](https://github.com/lordoferos), or just send me an email.
+
+Thanks for stopping by.

@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
 export const LINKS = {
 	professional: 'https://lordoferos.github.io',
 	wrangla360: 'https://wrangla360.com',
+	books: 'https://www.amazon.com/stores/author/B01MTEZ03T',
 	github: 'https://github.com/lordoferos',
 	x: 'https://x.com/leviorero',
 	email: 'mailto:levi@wrangla360.com',
